@@ -1,0 +1,29 @@
+# System configuration.
+romimage: file=$BXSHARE/BIOS-bochs-latest
+vgaromimage: file=$BXSHARE/VGABIOS-lgpl-latest
+cpu: count=1, ips=120000000
+clock: sync=slowdown
+megs: 256
+
+
+floppya : 2_88="E:\Programming\Current\Simple OS\kernelLoader.bin", status = inserted
+#floppya : 2_88=boot_sect.bin, status = inserted
+boot : floppy
+
+#boot: cdrom
+#, disk
+
+# Hard disks.
+#ata0: enabled=1, ioaddr1=0x1f0, ioaddr2=0x3f0, irq=14
+#ata0-master: type=disk, path="E:\Programming\Current\Simple OS\Boch\bochs-disk-image.img", cylinders=4161, heads=8, spt=63
+
+
+
+#ata0-master: type=disk, path="disk.img", mode=flat
+
+
+
+# CDROM
+#ata1: enabled=1, ioaddr1=0x170, ioaddr2=0x370, irq=15
+#ata1-master: type=cdrom, path="boot_sect.bin", status=inserted
+#ata1-master: type=cdrom, path="CorePlus-current.iso", status=inserted
